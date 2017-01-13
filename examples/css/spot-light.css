@@ -1,0 +1,58 @@
+body {
+	background-color: #fff000;
+}
+#spot-light-wrapper {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#spot-light-screen,
+#spot-light-color {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 360px;
+  margin: 0 auto;
+  opacity: 0;
+  overflow: overlay;
+}
+
+#spot-light-screen.spot-light-darkness {
+  z-index: 1;
+  background-color: #000;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: spot-light-fade-in;
+}
+
+@-webkit-keyframes spot-light-fade-in {
+  from,0.5% {
+    opacity: 0;
+  }
+  99.9%,to {
+    opacity: 1;
+  }
+}
+#spot-light-color.spot-light-flash {
+  opacity: 0.5;
+  background-color: #fff9eb;
+}
+
+#spot-light-circle.spot-light-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  z-index: 1;
+  -webkit-animation: spot-light-animation 5s ease 0s 1 normal none;
+  background: -webkit-radial-gradient(circle, rgba(225, 225, 225, 0.5), rgba(225, 225, 255, 0.5) 50px, rgba(0, 0, 0, 0.90196) 80px, rgba(0, 0, 0, 0.8));
+}

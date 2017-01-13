@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Spot Light Animation</title>
+	<meta name="description" content="Spot Light Animation">
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="css/spot-light.css?v=1.0">
+</head>
+<body>
+<div id="spot-light-wrapper">
+	<div id="spot-light-screen"></div>
+	<div id="spot-light-circle"></div>
+	<div id="spot-light-color"></div>
+</div>
+	<script src="js/spot-light.js"></script>
+	<script>
+	window.addEventListener("DOMContentLoaded", function() {
+		var wrapper = document.getElementById('spot-light-wrapper');
+		new SpotLightAnimation({
+			is_ios: 1,
+			timer_list: [
+				1000,
+				500,
+				4700,
+				300
+			],
+			duration: 5000,
+			move_count: 9,
+			radius: 50,
+			prefix: 'spot-light-',
+			element: {
+				width: 320,
+				height: 360
+			},
+			goal: {
+				x: -25,
+				y: -25
+			}
+		});
+	});
+	</script>
+</body>
+</html>
