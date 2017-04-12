@@ -88,8 +88,8 @@
 			return css_style;
 		},
 		createStyleTag: function(css_style) {
-			var rules = document.createTextNode(css_style);
-			var element = document.createElement('style');
+			var rules = _doc.createTextNode(css_style);
+			var element = _doc.createElement('style');
 			element.media = 'screen';
 			element.type = 'text/css';
 			element.appendChild(rules);
